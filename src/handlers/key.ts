@@ -45,7 +45,6 @@ keyHandler.callbackQuery("get_key", async (ctx) => {
 
     const client = {
       id: uuid,
-      flow: "xtls-rprx-vision",
       email,
       limitIp: 0,
       totalGB: 0,

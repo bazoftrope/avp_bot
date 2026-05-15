@@ -1,4 +1,4 @@
-import { randomUUID } from 'crypto';
+import { randomUUID } from "crypto";
 
 export interface VlessKeyParams {
   uuid: string;
@@ -26,19 +26,17 @@ export function generateVlessLink(params: VlessKeyParams): string {
     shortId,
     spiderX,
     remark,
-    flow = 'xtls-rprx-vision',
   } = params;
 
   const query = new URLSearchParams({
-    type: 'tcp',
-    encryption: 'none',
+    type: "tcp",
+    encryption: "none",
     security,
     pbk: publicKey,
     fp: fingerprint,
     sni: serverName,
     sid: shortId,
     spx: spiderX,
-    flow,
   });
 
   return `vless://${uuid}@${address}:${port}?${query.toString()}#${encodeURIComponent(remark)}`;
