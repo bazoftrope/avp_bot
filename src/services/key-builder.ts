@@ -30,7 +30,8 @@ export function generateVlessLink(params: VlessKeyParams): string {
 
   const query = new URLSearchParams({
     type: "tcp",
-    encryption: "none",
+    encryption:
+      "mlkem768x25519plus.native.0rtt.pjFNbDMnPFICEBRRfvuLoEfS7IIL5kndGqBXSJlJQmQ",
     security,
     pbk: publicKey,
     fp: fingerprint,
